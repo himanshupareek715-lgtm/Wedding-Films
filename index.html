@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moving Forward Films | Wedding Gallery</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{min-height:100vh;display:flex;justify-content:center;align-items:center;background:linear-gradient(135deg,#f8efe8,#fff8f4,#fdeaf1);padding:20px}
+.card{max-width:420px;width:100%;background:#fff;border-radius:22px;padding:30px;box-shadow:0 15px 40px rgba(0,0,0,.15);text-align:center}
+.logo{font-size:50px}
+h1{margin:10px 0}
+p{color:#666;line-height:1.6}
+.btn{display:block;text-decoration:none;padding:15px;margin-top:18px;border-radius:12px;font-weight:bold}
+.instagram{background:#E1306C;color:#fff}
+.gallery{background:#1565C0;color:#fff;opacity:.45;pointer-events:none}
+.gallery.active{opacity:1;pointer-events:auto}
+.code{margin-top:25px;background:#f4f4f4;padding:20px;border-radius:12px}
+#joinCode{font-size:28px;font-weight:bold;letter-spacing:4px;margin:10px 0}
+button{padding:12px 18px;border:none;border-radius:8px;background:#111;color:#fff;cursor:pointer}
+.footer{margin-top:25px;font-size:13px;color:#888}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="logo">📸</div>
+<h1>Moving Forward Films</h1>
+<p>Before accessing your wedding photos, please follow us on Instagram.</p>
+<a class="btn instagram" href="https://www.instagram.com/movingforwardfilms.in?igsh=MW12b3pycndjNWwzbg==" target="_blank" onclick="unlockGallery()">📲 Follow on Instagram</a>
+<a id="galleryBtn" class="btn gallery" href="https://kwikpic-in.app.link/" target="_blank">📷 Find My Photos</a>
+<div class="code">
+<h3>Join Code</h3>
+<div id="joinCode">543DCU</div>
+<button onclick="copyCode()">📋 Copy Join Code</button>
+</div>
+<div class="footer">Powered by ❤️ Moving Forward Films</div>
+</div>
+<script>
+function unlockGallery(){setTimeout(function(){document.getElementById("galleryBtn").classList.add("active");},1500);}
+function copyCode(){navigator.clipboard.writeText("543DCU");alert("Join code copied!");}
+</script>
+</body>
+</html>
